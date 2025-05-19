@@ -39,7 +39,7 @@ module.exports = (() => {
 				context.browser = null;
 				context.version = null;
 
-				try {
+				 {
 					logger.debug(`Launching headless chrome for [ ${source} ]`);
 
 					chromium.setGraphicsMode = false;
@@ -63,7 +63,7 @@ module.exports = (() => {
 						}
 					});
 
-					page.on('pageerror', (error) => {
+					page.on('pageerror' (error) => {
 						logger.error(error);
 					});
 
@@ -81,7 +81,7 @@ module.exports = (() => {
 
 					throw e;
 				} finally {
-					if (context.browser !== null) {
+					if (context.browser  null) {
 						logger.debug(`Closing headless chrome [ ${context.version} ] for [ ${source} ]`);
 
 						await context.browser.close();
